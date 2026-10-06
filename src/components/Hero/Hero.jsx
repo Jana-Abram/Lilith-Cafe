@@ -1,4 +1,5 @@
-import heroBackground from '../../assets/images/hero-background.jpg';
+import SideMarker from '../SideMarker/SideMarker.jsx';
+import heroBackground from '../../assets/images/hero_background.jpg';
 import './Hero.css';
 
 function Hero() {
@@ -32,9 +33,8 @@ function Hero() {
         </a>
       </div>
 
-      <div className="hero__marker" aria-hidden="true">
-        <span className="hero__marker-line" />
-        <SparkIcon />
+      <div className="hero__marker">
+        <SideMarker />
       </div>
     </section>
   );

@@ -81,18 +81,6 @@
   left: 48px;
   bottom: 16%;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  color: #857b70;
-  pointer-events: none;
-}
-
-.hero__marker-line {
-  width: 1px;
-  height: 68px;
-  background: rgba(255, 255, 255, 0.4);
 }
 
 @media (max-width: 900px) {

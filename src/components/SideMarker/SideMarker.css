@@ -1,0 +1,24 @@
+.side-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #857b70;
+  pointer-events: none;
+}
+
+.side-marker__line {
+  width: 1px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.side-marker__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}

@@ -7,9 +7,14 @@
   pointer-events: none;
 }
 
+/* подпись сверху, затем звёздочка, затем линия */
+.side-marker--reversed {
+  flex-direction: column-reverse;
+}
+
 .side-marker__line {
   width: 1px;
-  height: 56px;
+  height: 64px;
   background: rgba(255, 255, 255, 0.4);
 }
 
@@ -17,8 +22,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  font-size: 0.65rem;
-  letter-spacing: 0.18em;
+  gap: 14px;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+.side-marker__phrase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }

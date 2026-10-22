@@ -6,16 +6,17 @@ import './About.css';
 function About() {
   return (
     <section className="about" id="about">
-
       <div className="about__photo about__photo--left">
-        <img src={aboutCafe} alt="Букет лилий, книги и чашка кофе на столе Lilith Café" />
+        <img src={aboutLilith} alt="Витрина кафе Lilith вечером, с лилиями у входа" />
       </div>
 
       <div className="about__content">
         <p className="about__eyebrow">About</p>
 
         <h2 className="about__title">
-          A café for <em>dreamers</em> and <em>wanderers</em>
+          A café for
+          <br />
+          <em>dreamers</em> and <em>wanderers</em>
         </h2>
 
         <p className="about__text">
@@ -37,8 +38,11 @@ function About() {
       </div>
 
       <div className="about__photo about__photo--right">
-        <img src={aboutLilith} alt="Окно кафе со свечами и лилиями в вазе" />
+        <img src={aboutCafe} alt="Букет лилий, книги и чашка кофе на столе Lilith Café" />
 
+        <div className="about__marker">
+          <SideMarker label={['Good Food', 'Good Mood']} reversed />
+        </div>
       </div>
     </section>
   );

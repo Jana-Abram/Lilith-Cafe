@@ -1,73 +1,76 @@
 .about {
-  position: relative;
-  background-color: #100d0c;
   display: grid;
-  grid-template-columns: 1fr 1.1fr 1fr;
+  grid-template-columns: 2fr 2.9fr 1fr;
   align-items: center;
-  gap: 48px;
-  padding: 96px 140px 96px 64px; /* справа больше места — под полоску со звёздочкой */
+  padding: 96px 160px 96px 64px; /* справа место под GOOD FOOD / GOOD MOOD */
+  background-color: #100d0c;
+  text-align: left;
 }
 
+/* фото */
 .about__photo {
-  width: 100%;
-  min-height: 420px;
-  overflow: hidden;
+  position: relative;
   background-color: #17130f;
 }
 
+.about__photo--left {
+  aspect-ratio: 15 / 16;
+}
+
+.about__photo--right {
+  aspect-ratio: 7 / 15;
+}
+
 .about__photo img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  min-height: 420px;
   object-fit: cover;
   display: block;
 }
 
-.about__photo--right {
-  position: relative; /* точка отсчёта для .about__marker ниже */
-}
-
-.about__photo--right img {
-  min-height: 460px;
-}
-
+/* текст — начинается слева, с отступом от фото */
 .about__content {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 24px;
+  padding-inline: clamp(32px, 5.6vw, 108px) 48px;
 }
 
 .about__eyebrow {
   font-size: 0.78rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #dba7b1;
+  color: #b7a49e;
 }
 
 .about__title {
-  font-size: clamp(1.9rem, 2.6vw, 2.5rem);
-  font-weight: 500;
-  line-height: 1.25;
+  font-size: clamp(2rem, 2.8vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.2;
   color: #ffffff;
 }
 
 .about__title em {
   font-style: italic;
-  font-weight: 400;
 }
 
 .about__text {
-  max-width: 42ch;
-  font-size: 1rem;
-  line-height: 1.6;
+  max-width: 480px;
+  font-size: 1.05rem;
+  line-height: 1.65;
   color: #cfc6bc;
 }
 
+/* линия — бантик — линия на всю ширину текста */
 .about__divider {
   display: flex;
   align-items: center;
   gap: 16px;
   width: 100%;
+  max-width: 480px;
   color: #dba7b1;
 }
 
@@ -81,7 +84,6 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  width: fit-content;
   font-size: 0.78rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -97,20 +99,23 @@
   transform: translateX(4px);
 }
 
-/* GOOD FOOD / GOOD MOOD — у правого фото, справа от него */
+/* GOOD FOOD / GOOD MOOD — справа от правого фото */
 .about__marker {
   position: absolute;
-  right: -76px;
+  left: calc(100% + 52px);
   top: 50%;
   transform: translateY(-50%);
-  z-index: 2;
 }
 
 @media (max-width: 1024px) {
   .about {
     grid-template-columns: 1fr;
-    padding-left: 64px;
-    padding-right: 64px;
+    gap: 40px;
+    padding: 64px 24px;
+  }
+
+  .about__content {
+    padding-inline: 0;
   }
 
   .about__marker {

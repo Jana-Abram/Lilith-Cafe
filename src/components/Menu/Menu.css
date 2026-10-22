@@ -1,0 +1,140 @@
+.menu {
+  padding: 0 64px 96px;
+  background-color: #100d0c;
+  text-align: left; /* на случай остатков центрирования от шаблона Vite */
+}
+
+/* верхняя тонкая линия-разделитель из макета */
+.menu__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.menu__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.menu__eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #b7a49e;
+}
+
+.menu__title {
+  font-size: clamp(1.9rem, 2.6vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: #ffffff;
+}
+
+.menu__subtitle {
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  color: #cfc6bc;
+}
+
+.menu__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.menu__link svg {
+  transition: transform 0.2s ease;
+}
+
+.menu__link:hover svg {
+  transform: translateX(4px);
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  margin: 40px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* название и цена под фото — по центру, как в макете */
+  text-align: center;
+}
+
+.menu-card__photo {
+  width: 100%;
+  aspect-ratio: 10 / 9;
+  background-color: #17130f;
+  overflow: hidden;
+}
+
+.menu-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-card__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #857b70;
+}
+
+.menu-card__name {
+  margin-top: 18px;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #e6dfd6;
+}
+
+.menu-card__price {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  color: #cfc6bc;
+}
+
+@media (max-width: 1024px) {
+  .menu__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .menu {
+    padding: 0 24px 64px;
+  }
+
+  .menu__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu__grid {
+    grid-template-columns: 1fr;
+  }
+}

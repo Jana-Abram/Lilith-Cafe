@@ -1,4 +1,4 @@
-import MenuCard from './menuCard.jsx';
+import MenuCard from './MenuCard.jsx';
 import { MENU_ITEMS } from './menuItems.js';
 import './Menu.css';
 

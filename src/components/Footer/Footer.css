@@ -1,0 +1,146 @@
+.footer {
+  position: relative;
+  padding: 0 64px;
+  overflow: hidden;
+  background-color: #100d0c;
+  text-align: left;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 2.7fr 1.4fr 1.5fr 1fr;
+  align-items: start;
+  padding-top: 16px;
+  padding-bottom: 110px; /* место под спарк и лилию внизу */
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* бренд */
+.footer__bow {
+  color: #dba7b1;
+}
+
+.footer__name {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #cfc6bc;
+}
+
+.footer__tagline {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  color: #cfc6bc;
+}
+
+/* блоки «адрес» и «часы работы» */
+.footer-info {
+  padding-top: 8px;
+}
+
+.footer-info__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #e6dfd6;
+}
+
+.footer-info__title {
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.footer-info__text {
+  margin-top: 14px;
+  padding-left: 28px; /* ширина иконки + gap, чтобы текст шёл под заголовком */
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  line-height: 1.9;
+  color: #cfc6bc;
+}
+
+.footer-info__text span {
+  display: block;
+}
+
+/* соцсети с вертикальным разделителем слева */
+.footer__socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  height: 68px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer__social {
+  display: flex;
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+.footer__social:hover {
+  color: #dba7b1;
+}
+
+/* декор снизу по центру: спарк + приглушённая лилия */
+.footer__decor {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #e8c9cf;
+  pointer-events: none;
+}
+
+.footer__flower {
+  width: 280px;
+  height: 70px;
+  background: radial-gradient(
+    ellipse at 50% 100%,
+    rgba(120, 90, 90, 0.28),
+    transparent 70%
+  );
+}
+
+@media (max-width: 1024px) {
+  .footer__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer__socials {
+    justify-content: flex-start;
+    padding-left: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 0 24px;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__socials {
+    height: auto;
+    padding: 20px 0 0;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    justify-content: flex-start;
+  }
+}

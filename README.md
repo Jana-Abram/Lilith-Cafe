@@ -5,7 +5,7 @@ A moody, dark-coquette landing page for a fictional café, built from a finished
 
 <img width="1627" height="1080" alt="Знімок екрана 2026-10-23 120740" src="https://github.com/user-attachments/assets/003c4ddf-9d1b-4094-b89f-5e0c6554bb5c" />
 
-**Live demo:** 
+**Live demo:** https://lilith-cafe-q5bx.vercel.app/
 
 ## About the project
 
@@ -35,8 +35,6 @@ cd lilith-cafe
 npm install
 npm run dev
 ```
-
-The site will be available at ``.
 
 ## Project structure
 
